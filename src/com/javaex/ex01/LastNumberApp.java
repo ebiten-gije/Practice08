@@ -25,8 +25,12 @@ public class LastNumberApp {
 			System.out.println(result);
 				
 		} catch (ArrayIndexOutOfBoundsException e) {
+			//	구체적 예외 처리를 앞으로 빼자!
 			System.out.println("배열의 범위를 넘었습니다.");
 			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
 		}
 		
 	}

@@ -14,6 +14,7 @@ public class Point {
 	@Override
 	public String toString() {
 		return "[포인트] x: " + x + ", y: " + y + " 입니다";
+		//	return String.format("[포인트] x = %d, y = %d 입니다.%n", x, y);
 	}
 
 }

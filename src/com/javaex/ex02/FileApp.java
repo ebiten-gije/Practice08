@@ -10,8 +10,8 @@ public class FileApp {
 		try {
 			fileRead();	
 		} catch (IOException e) {
-			e.printStackTrace();
-			System.out.println("파일이 없습니다.");
+		System.out.println("파일이 없습니다.");
+		e.printStackTrace();
 		}
 		
 

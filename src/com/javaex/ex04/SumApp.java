@@ -13,7 +13,7 @@ public class SumApp {
 
 		//코드를 작성하세요
 		
-		String[] split = numLine.split(" ");
+		String[] split = numLine.split(" ");	//	공백 문자를 기준으로 분할
 		for (Object num : split) {
 			sum += Integer.parseInt((String) num);
 		}

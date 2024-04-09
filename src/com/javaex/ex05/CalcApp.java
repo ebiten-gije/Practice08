@@ -18,6 +18,7 @@ public class CalcApp {
     			q = false;
     			System.out.println("종료합니다.");
     			sc.close();
+    			break;
     		}
     		
     		try {
@@ -26,28 +27,35 @@ public class CalcApp {
     			int a = Integer.parseInt(split[0]);
     			int b = Integer.parseInt(split[2]);
     		
-    			if (split[1].equals("+")) {
-    				Add add = new Add();
+    			switch (split[1]) {
+    			
+    			case "+": Add add = new Add();
     				add.setValue(a, b);
     				System.out.println(">> " + add.calculate());
-    			} else if (split[1].equals("-")) {
-    				Sub sub = new Sub();
+    				break;
+    				
+    			case "-": Sub sub = new Sub();
     				sub.setValue(a, b);
     				System.out.println(">> " + sub.calculate());
-    			} else if (split[1].equals("*")) {
-    				Mul mul = new Mul();
+    				break;
+    				
+    			case "*": Mul mul = new Mul();
     				mul.setValue(a, b);
     				System.out.println(">> " + mul.calculate());
-    			} else if (split[1].equals("/")) {
-    				Div div = new Div();
+    				break;
+    				
+    			case "/": Div div = new Div();
     				div.setValue(a, b);
     				System.out.println(">> " + div.calculate());
-    			} else {
+    				break;
+    				
+    			default :
     				System.out.println("알 수 없는 연산입니다.");
+    				break;
     			}
     		
     		} catch (Exception e) {
-    			
+//    			System.err.println("규격을 맞춰주세용~");
     		}
     		
     	}
